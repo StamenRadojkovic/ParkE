@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ParkNav — parking &amp; EV charging navigation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <div id="mapWrap">
+    <canvas id="map"></canvas>
+    <div class="map-ui" id="topbar">
+      <div id="searchBox">
+        <span class="search-icon">⌕</span>
+        <input id="search" type="text" placeholder="Search a destination…" autocomplete="off" spellcheck="false">
+        <button id="clearSearch" title="Clear">✕</button>
+        <div id="suggest"></div>
+      </div>
+      <button id="accountBtn">Sign in</button>
+    </div>
+    <div class="map-ui" id="placeHint">Tap the map to place your parking lot</div>
+    <div class="map-ui" id="zoomCtl">
+      <button class="mbtn" id="zin" title="Zoom in">+</button>
+      <button class="mbtn" id="zout" title="Zoom out">−</button>
+      <button class="mbtn" id="zme" title="Centre on me">◎</button>
+    </div>
+    <div class="map-ui" id="legend">
+      <span class="lg"><i class="dot" style="background:var(--good)"></i>Spaces free</span>
+      <span class="lg"><i class="dot" style="background:var(--warn)"></i>Filling up</span>
+      <span class="lg"><i class="dot" style="background:var(--bad)"></i>Full</span>
+      <span class="lg"><i class="dot" style="background:var(--ev)"></i>EV charging</span>
+    </div>
+  </div>
+
+  <aside id="side">
+    <div id="sideHead">
+      <div class="brand"><span class="logo">P</span> ParkNav</div>
+      <div class="tabs" id="tabs">
+        <button data-tab="nav" class="on">Navigate</button>
+        <button data-tab="park">Parking</button>
+        <button data-tab="owner">My lots</button>
+      </div>
+    </div>
+    <div id="sideBody"></div>
+  </aside>
+</div>
+
+<div id="modal"><div class="sheet" id="sheet"></div></div>
+
+<script src="app.js"></script>
+</body>
+</html>
