@@ -37,7 +37,7 @@ No build step, no dependencies, no API keys. Open `index.html` and it runs.
 ### Locally
 
 ```bash
-git clone https://github.com/<you>/parke.git
+git clone https://github.com/StamenRadojkovic/ParkE.git
 cd parke
 open index.html        # macOS  (Linux: xdg-open, Windows: start)
 ```
@@ -65,17 +65,13 @@ No other configuration is needed — `index.html` is at the repo root.
 ```
 parke/
 ├── index.html          # markup and page shell
-├── css/
-│   └── styles.css      # design tokens, light/dark theming, layout
-├── js/
-│   └── app.js           # everything else (see below)
+├── styles.css      # design, light/dark theming, layout
+├── app.js           # everything else (see below)
 ├── README.md
-├── USER_GUIDE.md        # end-user instructions
-├── LICENSE
-└── .gitignore
+└── LICENSE
 ```
 
-`js/app.js` is organised in labelled sections:
+`app.js` is organised in labelled sections:
 
 | Section | What it does |
 |---|---|
